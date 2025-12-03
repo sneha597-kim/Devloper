@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: res-deploy
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+          app: resume
+    template:
+        metadata:
+          labels:
+            app: resume
+        spec:
+          containers:
+            - name: resume-cont
+              image: snehalatha1336/res
+              ports:
+                  - containerPort: 80

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conatainer">
+        <input type="text" id="screen" readonly><br>
+
+        <button onclick="clr()">Clr</button>
+        <button onclick="del()">del</button>
+        <button onclick="press('/')">/</button>
+        <button onclick="press('*')">*</button><br>
+
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button onclick="press('-')">-</button><br>
+
+        <button onclick="press('4')">6</button>
+        <button onclick="press('5')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('+')">+</button><br>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button onclick="solve()">=</button><br>
+
+        <button onclick="press('0')" style="width:106px;">0</button>
+    <button onclick="press('.')">.</button>
+    </div>
+    <script>
+    function clr(){
+        document.getElementById('screen').value="";
+    }
+    function del(){
+        let x=document.getElementById('screen').value;
+        document.getElementById('screen').value=x.substring(0,x.length-1);
+    }
+    function press(v){
+        document.getElementById('screen').value+=v;
+    }
+    function solve()
+    {
+        document.getElementById('screen').value=eval(document.getElementById('screen').value);
+    }
+</script>
+</body>
+</html>

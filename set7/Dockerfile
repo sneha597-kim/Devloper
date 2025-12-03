@@ -1,4 +1,4 @@
 FROM nginx:latest
-COPY pizza.html /usr/share/nginx/html/index.html
+COPY resume.html /usr/share/nginx/html/index.html
 EXPOSE 8082
 CMD ["nginx","-g","daemon off;"]

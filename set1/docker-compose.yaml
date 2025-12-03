@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+    random_num: 
+      build: .
+      container_name: rand
+      command: python random_num.py
+    guess:
+      build: .
+      container_name: gue
+      command: python guess.py
+      stdin: true
+      tty: true

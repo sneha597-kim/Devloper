@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: calc1
+spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: calc
+    template:
+      metadata:
+        labels:
+          app: calc
+      spec:
+        containers:
+          - name: webcon
+            image: snehalatha1336/calcc
