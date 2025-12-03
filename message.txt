@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Part1 of secret messase
+=======
+part2 of the secret message
+>>>>>>> st2
