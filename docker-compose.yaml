@@ -1,12 +1,7 @@
 version: "3.8"
 services:
-  random_num:
+  web_app:
     build: .
-    container_name: rand_con
-    command: python random_num.py
-  guess:
-    build: .
-    container_name: guess_con
-    command: python guess.py
-    stdin_open: true
-    tty: true
+    container_name: regis
+    ports:
+      -"5000:5000"
